@@ -1,6 +1,11 @@
 class TicketTypesController < ApplicationController
   before_action :set_ticket_type, only: [:show, :edit, :update, :destroy]
   
+  # Notice in the ticket_type_authorizer we log the extra options. I show the output
+  # of the logger before each authorization:
+  
+  # Notice nothing is logged here.
+  # OPTS:
   authorize_actions_for TicketType, context: "controller-level doesn't accept options"
   
   before_action :custom_authorization
@@ -8,34 +13,30 @@ class TicketTypesController < ApplicationController
 private
 
   def custom_authorization
+    # This works.
+    # OPTS:  {:context=>"custom controller-level accepts options"}
     authorize_action_for TicketType, context: "custom controller-level accepts options"
   end
   
 public
 
-  # GET /ticket_types
-  # GET /ticket_types.json
   def index
+    # This works.
+    # OPTS:  {:context=>"action-level accepts options"}
     authorize_action_for TicketType, context: "action-level accepts options"
     @ticket_types = TicketType.all
   end
 
-  # GET /ticket_types/1
-  # GET /ticket_types/1.json
   def show
   end
 
-  # GET /ticket_types/new
   def new
     @ticket_type = TicketType.new
   end
 
-  # GET /ticket_types/1/edit
   def edit
   end
 
-  # POST /ticket_types
-  # POST /ticket_types.json
   def create
     @ticket_type = TicketType.new(ticket_type_params)
 
@@ -50,8 +51,6 @@ public
     end
   end
 
-  # PATCH/PUT /ticket_types/1
-  # PATCH/PUT /ticket_types/1.json
   def update
     respond_to do |format|
       if @ticket_type.update(ticket_type_params)
@@ -64,8 +63,6 @@ public
     end
   end
 
-  # DELETE /ticket_types/1
-  # DELETE /ticket_types/1.json
   def destroy
     @ticket_type.destroy
     respond_to do |format|
@@ -75,12 +72,10 @@ public
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_ticket_type
       @ticket_type = TicketType.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def ticket_type_params
       params.fetch(:ticket_type, {})
     end
