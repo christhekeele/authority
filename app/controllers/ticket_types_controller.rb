@@ -4,9 +4,9 @@ class TicketTypesController < ApplicationController
   # Notice in the ticket_type_authorizer we log the extra options. I show the output
   # of the logger before each authorization:
   
-  # Notice nothing is logged here.
-  # OPTS:
-  authorize_actions_for TicketType, context: "controller-level doesn't accept options"
+  # This now works.
+  # OPTS:  {context: "controller-level now accepts options"}
+  authorize_actions_for TicketType, opts: [{context: "controller-level now accepts options"}]
   
   before_action :custom_authorization
   

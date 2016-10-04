@@ -38,5 +38,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'authority'
+gem 'authority', github: 'christhekeele/authority', branch: 'custom-opts-in-authorize_actions_for'
 gem 'pry'
