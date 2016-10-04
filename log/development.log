@@ -1,0 +1,248 @@
+
+
+Started GET "/ticket_types" for 127.0.0.1 at 2016-10-04 09:00:45 -0700
+
+ActiveRecord::NoDatabaseError (FATAL:  database "authority_app_development" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.16) lib/active_record/connection_adapters/postgresql_adapter.rb:898:in `rescue in connect'
+  activerecord (4.1.16) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.16) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.16) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.16) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/keele/.rbenv/versions/2.3.1/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/keele/.rbenv/versions/2.3.1/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.16) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.16) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.16) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.16) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.16) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.16) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.16) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.16) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.16) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.16) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.16) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.16) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.16) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.16) lib/rails/engine.rb:514:in `call'
+  railties (4.1.16) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/keele/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/keele/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/keele/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/keele/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.16/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/keele/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.16/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/keele/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/keele/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.9ms)
+  [1m[36m (7.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (17.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTicketTypes (20161004155534)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (24.4ms)[0m  [1mCREATE TABLE "ticket_types" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161004155534"]]
+  [1m[36m (11.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateUsers (20161004155821)
+  [1m[35m (11.0ms)[0m  BEGIN
+  [1m[36m (16.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161004155821"]]
+  [1m[36m (9.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/ticket_types" for 127.0.0.1 at 2016-10-04 09:01:27 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TicketTypesController#index as HTML
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `current_user' for #<TicketTypesController:0x007fdd1d1fd6d0>):
+  authority (3.2.0) lib/authority/controller.rb:168:in `authority_user'
+  authority (3.2.0) lib/authority/controller.rb:123:in `authorize_action_for'
+  authority (3.2.0) lib/authority/controller.rb:146:in `run_authorization_check'
+  activesupport (4.1.16) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+  activesupport (4.1.16) lib/active_support/callbacks.rb:161:in `block in halting'
+  activesupport (4.1.16) lib/active_support/callbacks.rb:501:in `block in call'
+  activesupport (4.1.16) lib/active_support/callbacks.rb:501:in `each'
+  activesupport (4.1.16) lib/active_support/callbacks.rb:501:in `call'
+  activesupport (4.1.16) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.16) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.16) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.16) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.1.16) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.16) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.16) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.16) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.16) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.16) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.16) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.16) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.16) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.16) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.16) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.16) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.16) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.16) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.16) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.16) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.16) lib/action_dispatch/routing/route_set.rb:690:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/cookies.rb:562:in `call'
+  activerecord (4.1.16) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.16) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.16) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.16) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.16) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.16) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.16) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.16) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.16) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.16) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.16) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.16) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.16) lib/rails/engine.rb:514:in `call'
+  railties (4.1.16) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/keele/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/keele/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/keele/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/keele/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.16/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/keele/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.16/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/keele/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/keele/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.0ms)
+
+
+Started GET "/ticket_types" for 127.0.0.1 at 2016-10-04 09:02:13 -0700
+Processing by TicketTypesController#index as HTML
+  Rendered public/403.html (0.4ms)
+Completed 403 Forbidden in 37ms (Views: 31.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/ticket_types" for 127.0.0.1 at 2016-10-04 09:03:38 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TicketTypesController#index as HTML
+  Rendered public/403.html (1.3ms)
+Completed 403 Forbidden in 48697ms (Views: 40.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/ticket_types" for 127.0.0.1 at 2016-10-04 09:04:31 -0700
+Processing by TicketTypesController#index as HTML
+  Rendered public/403.html (0.1ms)
+Completed 403 Forbidden in 2332ms (Views: 31.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/ticket_types" for 127.0.0.1 at 2016-10-04 09:04:49 -0700
+Processing by TicketTypesController#index as HTML
+  [1m[35mTicketType Load (8.5ms)[0m  SELECT "ticket_types".* FROM "ticket_types"
+  Rendered ticket_types/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 246959ms (Views: 457.0ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/ticket_types.css?body=1" for 127.0.0.1 at 2016-10-04 09:08:56 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-10-04 09:08:56 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-10-04 09:08:56 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-10-04 09:08:56 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-10-04 09:08:56 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-10-04 09:08:56 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-10-04 09:08:56 -0700
+
+
+Started GET "/assets/ticket_types.js?body=1" for 127.0.0.1 at 2016-10-04 09:08:56 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-10-04 09:08:56 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-10-04 09:08:56 -0700
+
+
+Started GET "/ticket_types" for 127.0.0.1 at 2016-10-04 09:09:01 -0700
+Processing by TicketTypesController#index as HTML
+  [1m[36mTicketType Load (0.1ms)[0m  [1mSELECT "ticket_types".* FROM "ticket_types"[0m
+  Rendered ticket_types/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 55ms (Views: 49.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-10-04 09:09:01 -0700
+
+
+Started GET "/assets/ticket_types.css?body=1" for 127.0.0.1 at 2016-10-04 09:09:01 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-10-04 09:09:01 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-10-04 09:09:01 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-10-04 09:09:01 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-10-04 09:09:01 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-10-04 09:09:01 -0700
+
+
+Started GET "/assets/ticket_types.js?body=1" for 127.0.0.1 at 2016-10-04 09:09:01 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-10-04 09:09:01 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-10-04 09:09:01 -0700
